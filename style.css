@@ -1,0 +1,31 @@
+/* Color Guide */
+:root {
+    --bright-yellow: hsl(71, 73%, 54%);
+    --cyan         : hsl(179, 62%, 43%);
+    --grayish-bue  : hsl(218, 22%, 67%);
+    --light-gray   : hsl(204, 43%, 93%);
+}
+
+/* Initialization */
+*,
+::before,
+::after {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--grayish-bue);
+    height          : 100vh;
+    width           : 100vw;
+}
+
+.attribution {
+    font-size : 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
