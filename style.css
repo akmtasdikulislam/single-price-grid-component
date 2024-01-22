@@ -2,7 +2,7 @@
 :root {
     --bright-yellow: hsl(71, 73%, 54%);
     --cyan         : hsl(179, 62%, 43%);
-    --grayish-bue  : hsl(218, 22%, 67%);
+    --grayish-blue : hsl(218, 22%, 67%);
     --light-gray   : hsl(204, 43%, 93%);
 }
 
@@ -13,17 +13,142 @@
     margin    : 0;
     padding   : 0;
     box-sizing: border-box;
+    font-family: "Karla",
+        sans-serif;
 }
 
 body {
-    background-color: var(--grayish-bue);
+    background-color: var(--light-grey);
     height          : 100vh;
     width           : 100vw;
+    display         : grid;
+    place-items     : center;
+    align-content   : center;
+}
+
+.card {
+    width           : 35em;
+    height          : 28em;
+    background-color: white;
+    border-radius   : .5em;
+    box-shadow      : rgba(50, 50, 93, 0.35) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    overflow: hidden;
+}
+
+.grid-container {
+    display              : grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows   : repeat(2, 1fr);
+}
+
+.grid-item-1 {
+    grid-column: 1/-1;
+    grid-row   : 1/2;
+    padding    : 2.25em;
+}
+
+.grid-item-2 {
+    grid-column     : 1/7;
+    grid-row        : 2/-1;
+    background-color: var(--cyan);
+    padding         : 2.25em;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+}
+
+.grid-item-3 {
+    grid-column     : 7/-1;
+    grid-row        : 2/-1;
+    background-color: var(--cyan);
+    filter          : brightness(105%);
+    padding         : 2.25em;
+
+}
+
+.card h2 {
+    color        : var(--cyan);
+    margin-bottom: 1em;
+}
+
+.highlight {
+    color        : var(--bright-yellow);
+    font-weight  : 700;
+    margin-bottom: .5em;
+}
+
+.grid-item-1 .body-text {
+    color      : var(--grayish-blue);
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+.grid-item-2 p {
+    color: white;
+}
+
+.grid-item-2 .card-title {
+    font-weight: 700;
+}
+
+.grid-item-2 .subscription-fee {
+    display    : flex;
+    align-items: center;
+}
+
+.grid-item-2 .subscription-fee span {
+    opacity    : 45%;
+    font-weight: 300;
+    font-size  : .95em;
+}
+
+.grid-item-2 .subscription-fee span.price {
+    font-size   : 1.75em;
+    font-weight : 700;
+    opacity     : 100%;
+    margin-right: .25em;
+}
+
+.grid-item-2 .body-text {
+    font-size: .85em;
+    color    : var(--light-gray);
+}
+
+.grid-item-2 button {
+    width           : 100%;
+    height          : 3em;
+    background-color: var(--bright-yellow);
+    color           : white;
+    border          : 0;
+    font-weight     : 700;
+    border-radius   : .35em;
+    box-shadow      : rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.grid-item-3 {
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+}
+
+.grid-item-3 .card-title {
+    color      : white;
+    font-weight: 700;
+}
+
+.grid-item-3 .body-text {
+    font-size  : .85em;
+    color      : var(--light-gray);
+    font-weight: 300;
+    opacity    : 75%;
+    line-height: 1.25em;
 }
 
 .attribution {
     font-size : 11px;
     text-align: center;
+    margin-top: 2em;
 }
 
 .attribution a {
