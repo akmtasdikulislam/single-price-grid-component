@@ -75,7 +75,7 @@ body {
 .highlight {
     color        : var(--bright-yellow);
     font-weight  : 700;
-    margin-bottom: .5em;
+    margin-bottom: .75em;
 }
 
 .grid-item-1 .body-text {
@@ -111,8 +111,9 @@ body {
 }
 
 .grid-item-2 .body-text {
-    font-size: .85em;
-    color    : var(--light-gray);
+    font-size : .85em;
+    color     : var(--light-gray);
+    margin-top: -1em;
 }
 
 .grid-item-2 button {
@@ -124,6 +125,7 @@ body {
     font-weight     : 700;
     border-radius   : .35em;
     box-shadow      : rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top      : .5em;
 }
 
 .grid-item-3 {
@@ -133,8 +135,9 @@ body {
 }
 
 .grid-item-3 .card-title {
-    color      : white;
-    font-weight: 700;
+    color        : white;
+    font-weight  : 700;
+    margin-bottom: 1em;
 }
 
 .grid-item-3 .body-text {
@@ -143,6 +146,30 @@ body {
     font-weight: 300;
     opacity    : 75%;
     line-height: 1.25em;
+}
+
+@media (max-width: 375px) {
+    .card {
+        width                : 20em;
+        height               : 45em;
+        grid-template-columns: 1fr;
+        grid-template-rows   : repeat(3, 1fr);
+    }
+
+    .grid-item-1 {
+        grid-column: 1/-1;
+        grid-row   : 1/2;
+    }
+
+    .grid-item-2 {
+        grid-column: 1/-1;
+        grid-row   : 2/3;
+    }
+
+    .grid-item-3 {
+        grid-column: 1/-1;
+        grid-row   : 3/-1;
+    }
 }
 
 .attribution {
